@@ -5,13 +5,13 @@
 ## 스펙
 
 1. Tree Graph 형식의 구조. 마인드맵처럼 캔버스 위에 문서(노드)를 생성할 수 있어야 합니다.
-   ![node](https://tectimage.s3.ap-northeast-2.amazonaws.com/3401616753376695.gif)
+   ![node](https://user-images.githubusercontent.com/33917337/135022238-c194fa21-d4b2-4d58-81b9-3307142116a3.gif)
 2. 클릭앤 드래그로 노드끼리 연결할 수 있어야 됩니다.
-   ![drag](https://tectimage.s3.ap-northeast-2.amazonaws.com/5491616759237796.gif)
+   ![drag](https://user-images.githubusercontent.com/33917337/135022267-5236083b-2b18-4794-9631-4da862360ea1.gif)
 3. 노드의 위치를 변경할 수 있어야 합니다.
-   ![position](https://tectimage.s3.ap-northeast-2.amazonaws.com/4471616760363764.gif)
+   ![position](https://user-images.githubusercontent.com/33917337/135022294-c012bb18-1de3-49fd-96d9-96659b6f571a.gif)
 4. 여러개의 문서창을 동시에 띄워놓고 문서창의 위치를 변경할 수 있어야 됩니다.
-   ![window](https://tectimage.s3.ap-northeast-2.amazonaws.com/3521616758793306.gif)
+   ![window](https://user-images.githubusercontent.com/33917337/135022312-84031ed6-8faa-4c3f-9455-17ab6a730a24.gif)
 
 ## 구현과정
 
@@ -20,7 +20,7 @@
 
 #### 1. 마인드맵처럼 캔버스 위에 문서(노드)를 생성할 수 있어야 합니다.
 
-![node](https://tectimage.s3.ap-northeast-2.amazonaws.com/3401616753376695.gif)
+![node](https://user-images.githubusercontent.com/33917337/135022238-c194fa21-d4b2-4d58-81b9-3307142116a3.gif)
 
 - 데이터 시각화 라이브러리인 d3js 를 활용했습니다. svg dom 에 이벤트리스너("dblclick")을 붙이고, 사용자가 더블클릭하면 노드가 생성되게 만들었습니다. 노드가 생성되면 redux 를 통해 상태를 갱신하고, 갱신한 상태에 따라 svg 노드를 렌더링 합니다.
 
@@ -71,8 +71,8 @@ function initNode() {
 
 #### 2. 클릭앤 드래그로 노드끼리 연결할 수 있어야 됩니다. && 3. 노드의 위치를 변경할 수 있어야 합니다.
 
-![drag](https://tectimage.s3.ap-northeast-2.amazonaws.com/5491616759237796.gif)
-![position](https://tectimage.s3.ap-northeast-2.amazonaws.com/4471616760363764.gif)
+![drag](https://user-images.githubusercontent.com/33917337/135022267-5236083b-2b18-4794-9631-4da862360ea1.gif)
+![position](https://user-images.githubusercontent.com/33917337/135022294-c012bb18-1de3-49fd-96d9-96659b6f571a.gif)
 
 d3js 의 .drag() 함수를 사용했습니다. 사용자가 드래그를 시작할때, 드래그중일때, 드래그가 끝났을때의 동작을 지정할 수 있습니다.
 
@@ -115,7 +115,7 @@ createdNodeGroup.call(
 
 #### 4. 여러개의 문서창을 동시에 띄워놓고 문서창의 위치를 변경할 수 있어야 됩니다.
 
-![window](https://tectimage.s3.ap-northeast-2.amazonaws.com/3521616758793306.gif)
+![window](https://user-images.githubusercontent.com/33917337/135022312-84031ed6-8faa-4c3f-9455-17ab6a730a24.gif)
 
 문서창을 여러개 띄워놓는 기능이 있을때 리액트로 상태관리를 어떻게 해야할지가 관건이었습니다.
 
